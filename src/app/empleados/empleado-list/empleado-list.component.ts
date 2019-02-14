@@ -30,7 +30,7 @@ export class EmpleadoListComponent implements OnInit, AfterViewInit {
   }
 
   public getAllOwners = () => {
-    this.repoService.getData('app/usuarios')
+    this.repoService.getData('api/usuarios')
     .subscribe(res => {
       this.dataSource.data = res as Empleado[];
     },

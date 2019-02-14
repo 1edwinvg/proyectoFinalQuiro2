@@ -4,7 +4,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
-
 import { RoutingModule } from './routing/routing.module';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
@@ -14,6 +13,8 @@ import { ServerErrorComponent } from './error-pages/server-error/server-error.co
 import { SharedModule } from './shared/shared.module';
 import { InicioComponent } from './inicio/inicio.component';
 
+import { LoginModule } from './login/login.module';
+import { AlertComponent } from './login/_directives/alert.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +24,18 @@ import { InicioComponent } from './inicio/inicio.component';
     HeaderComponent,
     SidenavListComponent,
     NotFoundComponent,
-    ServerErrorComponent
+    ServerErrorComponent,
+    AlertComponent
+    
+    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     SharedModule,
     RoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
